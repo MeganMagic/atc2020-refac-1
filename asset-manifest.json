@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/atc2020-refac-1/static/css/main.f6f55b32.chunk.css",
-    "main.js": "/atc2020-refac-1/static/js/main.737333f6.chunk.js",
-    "main.js.map": "/atc2020-refac-1/static/js/main.737333f6.chunk.js.map",
+    "main.js": "/atc2020-refac-1/static/js/main.23299efb.chunk.js",
+    "main.js.map": "/atc2020-refac-1/static/js/main.23299efb.chunk.js.map",
     "runtime-main.js": "/atc2020-refac-1/static/js/runtime-main.4fb7a118.js",
     "runtime-main.js.map": "/atc2020-refac-1/static/js/runtime-main.4fb7a118.js.map",
     "static/js/2.67891c21.chunk.js": "/atc2020-refac-1/static/js/2.67891c21.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.4fb7a118.js",
     "static/js/2.67891c21.chunk.js",
     "static/css/main.f6f55b32.chunk.css",
-    "static/js/main.737333f6.chunk.js"
+    "static/js/main.23299efb.chunk.js"
   ]
 }

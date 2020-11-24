@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/atc2020-refac-1/static/css/main.ffb057a1.chunk.css",
-    "main.js": "/atc2020-refac-1/static/js/main.b3ef6ea0.chunk.js",
-    "main.js.map": "/atc2020-refac-1/static/js/main.b3ef6ea0.chunk.js.map",
+    "main.css": "/atc2020-refac-1/static/css/main.2b71cb4e.chunk.css",
+    "main.js": "/atc2020-refac-1/static/js/main.836f060d.chunk.js",
+    "main.js.map": "/atc2020-refac-1/static/js/main.836f060d.chunk.js.map",
     "runtime-main.js": "/atc2020-refac-1/static/js/runtime-main.4fb7a118.js",
     "runtime-main.js.map": "/atc2020-refac-1/static/js/runtime-main.4fb7a118.js.map",
     "static/js/2.c5858820.chunk.js": "/atc2020-refac-1/static/js/2.c5858820.chunk.js",
     "static/js/2.c5858820.chunk.js.map": "/atc2020-refac-1/static/js/2.c5858820.chunk.js.map",
     "index.html": "/atc2020-refac-1/index.html",
-    "static/css/main.ffb057a1.chunk.css.map": "/atc2020-refac-1/static/css/main.ffb057a1.chunk.css.map",
+    "static/css/main.2b71cb4e.chunk.css.map": "/atc2020-refac-1/static/css/main.2b71cb4e.chunk.css.map",
     "static/js/2.c5858820.chunk.js.LICENSE.txt": "/atc2020-refac-1/static/js/2.c5858820.chunk.js.LICENSE.txt",
     "static/media/level2.png": "/atc2020-refac-1/static/media/level2.f41bb064.png",
     "static/media/level3.png": "/atc2020-refac-1/static/media/level3.c6438a88.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.4fb7a118.js",
     "static/js/2.c5858820.chunk.js",
-    "static/css/main.ffb057a1.chunk.css",
-    "static/js/main.b3ef6ea0.chunk.js"
+    "static/css/main.2b71cb4e.chunk.css",
+    "static/js/main.836f060d.chunk.js"
   ]
 }

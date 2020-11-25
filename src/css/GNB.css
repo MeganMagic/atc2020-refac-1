@@ -1,0 +1,41 @@
+ .gnb{
+    width : 100%;
+    height : 56px;
+    background-color: white;
+    border-bottom: 3px solid ;
+
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    z-index : 3;
+
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 17px 0 43px;
+} 
+.gnb .item {
+    font-size: 18px;
+    font-weight: bold;
+} 
+.gnb .logo {
+    height: 28px;
+} 
+.gnb .logo .img{
+    height : 100%;
+}
+ 
+.gnb .menu-hide {
+    display: none;
+}
+ 
+.gnb .search{
+    border-bottom: 1px solid;
+    height : 34px;
+} 
+.gnb .search .input{
+    height : 100%;
+    margin : 5px;
+}

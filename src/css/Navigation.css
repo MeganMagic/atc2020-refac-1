@@ -1,0 +1,54 @@
+.lobby .navigation{
+    width : 472px;
+    height : 317px;
+    z-index : 5;
+    border: solid 2px;
+    background-color: white;
+
+    position: fixed;
+    transition: bottom 0.5s ease-in-out;
+    bottom : -268px;
+    right : 21px;
+
+    overflow: hidden;
+}
+.lobby .navShow{
+    bottom : 35px;
+    overflow: scroll;
+}
+
+.lobby .navigation .title{
+    width: 100%;
+    height : 31px;
+    font-size : 13px;
+    font-weight: bold;
+    
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.lobby .navigation .navItem{
+    height : auto;
+    padding : 14px 23px;
+    border-top: 1px solid ;
+
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+}
+.lobby .navigation .navItem .floor{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: MurdenCF;
+    margin-right : 22px;
+}
+.lobby .navigation .navItem .floor-info .name{
+    font-size : 15px;
+    font-weight: bold;
+}
+.lobby .navigation .navItem .floor-info .list{
+    font-size : 13px;
+    text-align: justify;
+}
+

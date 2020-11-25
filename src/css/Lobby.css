@@ -1,0 +1,106 @@
+.lobby ul{
+    width : 100vw;
+    height: 100vh;
+    padding-top: 56px;
+
+    display: block;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    position : relative;
+    z-index : 0;
+}
+.lobby ul li{
+    display: inline-block;
+    white-space: pre-line;
+    vertical-align: middle;
+    /* padding-bottom : 50px; */
+}
+/* ---------------------------------------------------- */
+/* .lobby .content{
+    opacity: 0;
+    transition: opacity 1s linear;
+} */
+.lobby .content .item-text {
+    width : 330px;
+    margin-right : 117px;
+}
+.lobby .content .item-text .title{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.lobby .content .item-text .desc{
+    font-size : 16px;
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------------- */
+.lobby .content .item-title{
+    margin-left : 75px;
+    margin-right : 235px;
+    /* position : relative;
+    left : -180px; */
+}
+
+.lobby .content .item-text .subTitleLine {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------- */
+.lobby .content .item-entrance{
+    width : 550px;
+    margin-right: 103px;
+}
+.lobby .content .item-entrance .flex-row-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.lobby .content .item-entrance .thumbnail{
+    width : 360px;
+    height : 98%;
+    margin-right: 22px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 82px;
+    border-top-right-radius: 82px;
+}
+.lobby .content .item-entrance .thumbnail .picFrame{
+    width : 100%;
+}
+
+.lobby .content .item-entrance .info{
+    display: block;
+    width : 360px;
+}
+.lobby .content .item-entrance .info .title{
+    font-size : 24px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.lobby .content .item-entrance .info .desc{
+    font-size : 12px;
+}
+
+/* ---------------------------------------------------- */
+.lobby .content .item-intro{
+    margin-left: 165px;
+    height: 100%;
+    margin-top: auto;
+    padding-bottom: 0;
+}
+.lobby .content .intro-img{
+    height : 90%;
+    vertical-align: middle;
+}
+
+.lobby .content .flex-vertical-wrapper {
+    height : 100%;
+    display: flex;
+    align-items: center;
+}
+

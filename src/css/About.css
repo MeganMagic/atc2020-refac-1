@@ -1,0 +1,83 @@
+.about .section .text{
+    text-align: left;
+    margin-bottom: 1em;
+}
+/* ------------------------------------------------- */
+.about .aboutATC{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.about .aboutATC .title{
+    text-align: left;
+    margin-right: 40px;
+}
+.about .aboutATC .text{
+    width : 50%;
+    padding-top: 55px;
+}
+
+/* ------------------------------------------------- */
+.about .greeting .content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .greeting .image{
+    margin-right : 75px;
+}
+.about .greeting .caption{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.about .greeting .text{
+    padding-bottom: 1em;
+}
+
+/* ------------------------------------------------- */
+.about .aboutAND .title{
+    margin-bottom: 1em;
+}
+.about .aboutAND .subTitle{
+    font-size: 200px;
+    font-weight: 800;
+    /* text-align: center; */
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+/* ------------------------------------------------- */
+.about .history .flex-row-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.about .history .flex-row-wrapper > *{
+    margin-right: 40px;
+    margin-bottom: 80px;
+}
+.about .history .flex-row-wrapper > *:last-child{
+    margin-right: 0px;
+}
+
+/* ------------------------------------------------- */
+
+
+/* for table 786 - 1024 */
+@media screen and (max-width:1024px){
+    .about .section{ width : 100%;}
+    .about .aboutATC{
+        flex-direction: column;
+    }
+    .about .aboutATC .text{
+        width : 100%;
+    }
+    .about .greeting .content-wrapper{
+        flex-direction: column;
+    }
+    .about .greeting .image{
+        margin-right : 0px;
+        margin-bottom: 30px;
+    }
+}

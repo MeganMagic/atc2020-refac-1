@@ -33,10 +33,11 @@ const useGoogleDataParsing = (jsonData, table) => {
             return{
                 level : d[0].v,
                 title : d[1].v,
-                artists : d[2].v.split('/'),
-                genre : d[3].v,
-                archiving : d[4].v,
-                detailDesc : d[5].v
+                teamName : d[2].v,
+                artists : d[3].v.split('/'),
+                genre : d[4].v,
+                archiving : d[5].v,
+                detailDesc : d[6].v
             }
         })
     }
@@ -54,6 +55,15 @@ const useGoogleDataParsing = (jsonData, table) => {
                 source : d[1].v
             }
         })
+    }
+    else if( table === "logs" ){
+        return myData.map( (d) => {
+            return {
+                timestamp : d[0].f,
+                name : d[1].v,
+                comment : d[2].v
+            }
+        }).reverse()
     }
     
     return myData;

@@ -1,0 +1,103 @@
+.home{
+    width : 100vw;
+    height : 100vh;
+    white-space: pre-line;
+}
+
+.home .poster{
+    padding : 0 50px;
+}
+.home .poster .image{
+    width: 924px;
+    height : 45vh;
+    margin : 0 auto;
+    
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+/* ------------------------------ */
+.home .flex-row-wrapper{
+    display: flex;
+    flex-direction: row;
+    
+    padding : 5vh 80px;
+    width: 100%;
+}
+
+.home .section{
+    width : 100%;
+}
+.home .title{
+    font-size: 8vh;
+    font-weight: 800;
+    /* width : 60%; */
+    /* line-height: 1.18; */
+}
+.home .menu{
+    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------------------------ */
+.home .section .item{
+    font-size: 20px;
+    font-weight: 800;
+    padding : 1vh 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+.home .section .item:hover{
+    background-color: black;
+    color: white;
+}
+.home .section .go:hover .line{
+    stroke: white;
+}
+
+.home .section .go{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-bottom: 5vh;;
+}
+/* ---------------------------------------- */
+.home .flex-responsive-wrapper{
+    margin-top: 40px;
+    display : flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width : 1024px){
+    .home .flex-row-wrapper{
+        flex-direction: column;
+    }
+    .home .poster .image{
+        width : 100%;
+    }
+    .home .title{
+        font-size: 64px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .home .menu{
+        margin-left : 0;
+    }
+    .home .menu .go{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .home .menu .go .icon{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width : 768px){
+    .home .title{
+        font-size: 40px;
+    }
+}

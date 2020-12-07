@@ -1,21 +1,24 @@
  .gnb{
-    width : 100%;
+    width : 96%;
     height : 56px;
-    background-color: white;
-    border-bottom: 3px solid ;
+    background-color: transparent;
+    border-bottom: 4px solid ;
 
     position : fixed;
     top : 0px;
     left : 0px;
-    z-index : 3;
+    z-index : 9;
+    transition : top 0.5s ease-in-out;
 
     display : flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    padding: 0 17px 0 43px;
+    margin : 0 2%;
 } 
+.gnb-show{
+    top : -66px;
+}
 .gnb .item {
     font-size: 18px;
     font-weight: bold;

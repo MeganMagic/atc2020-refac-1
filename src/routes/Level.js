@@ -57,6 +57,8 @@ const Level = () => {
 
         document.querySelector(`#navigationLevel${num}`).style.backgroundColor = colorArray[num];
         document.querySelector(`#navigationLevel${num}`).style.color = "white";
+        document.querySelector(`.navigation`).style.borderColor = colorArray[num];
+
 
         refetch();
 
@@ -95,8 +97,9 @@ const Level = () => {
                     <img className="intro-img" alt={`level${num}`} src={require(`../data/level${num}.png`).default} />
                 </div>
             </li>
-            {/* <li style={{color:"white", fontSize : "180px", fontWeight:"800", textShadow:`-1px 0 ${colorArray[num]}, 0 1px ${colorArray[num]}, 1px 0 ${colorArray[num]}, 0 -1px ${colorArray[num]}`, marginLeft:"75px", paddingBottom:"65vh" }}>F6</li> */}
+            <li style={{color:"white", fontSize : "180px", fontWeight:"800", textShadow:`-1px 0 ${colorArray[num]}, 0 1px ${colorArray[num]}, 1px 0 ${colorArray[num]}, 0 -1px ${colorArray[num]}`, verticalAlign:"top", marginLeft:"50px", marginTop:"10vh" }}>{num}층</li>
             {items}
+            <li style={{height:"100vh", width:"1px", backgroundColor:colorArray[num], marginRight:"120px"}}></li>
             <li>
                 {
                     num > 2 ?

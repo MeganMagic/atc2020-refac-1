@@ -1,19 +1,15 @@
 .Gallery{
 }
-.Gallery .LNB{
-    z-index: 3;
-    position: fixed;
-    top : 50px;
-}
+
 .Gallery .section{
     width : 100vw;
 }
 .Gallery .section .wrapper{
     margin : 0 auto;
-    width : 800px;
+    width : 1024px;
     padding : 60px 0 80px 0;
 }
-.Gallery .section .title{
+.Gallery .section .sectionTitle{
     width : fit-content;
     margin : 0 auto;
     padding : 0 8px;
@@ -22,7 +18,7 @@
     top : -12px;
     background-color: white;
 }
-.Gallery .section .title .text{
+.Gallery .section .sectionTitle .text{
     font-size: 16px;
     font-weight: 700;
     text-align: center;
@@ -37,22 +33,28 @@
 .Gallery .intro {
     margin-top: 53px;
 }
+.Gallery .intro .flex-row-wrapper { 
+    display: flex;
+    flex-direction: row;
+}
+.Gallery .intro .flex-row-wrapper>div{
+    width : 50%;
+    text-align: left;
+}
 .Gallery .intro .title{
-    font-size: 24px;
+    font-size: 50px;
     font-weight: 800;
-    text-align: center;
     margin-bottom: 15px;
 }
 .Gallery .intro .genre{
     font-size: 16px;
-    text-align: center;
     margin-bottom: 28px;
 }
 .Gallery .intro .video{
     margin-bottom: 53px;
 }
 .Gallery .intro .desc{
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.88;
 }
 /* -------------------------------------- */
@@ -118,34 +120,40 @@
     text-align: center;
 }
 .Gallery .artist .list{
-    display: flex;
-    max-width: 600px;
-    height : 450px;
-    margin : 38px auto 0 auto;
+    width: 1024px;
+    margin : 0 auto;
 
-    flex-direction : row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
 }
 .Gallery .artist .list .item{
     text-align: center;
+    margin-top: 60px;
+
+    padding : 20px 10px 40px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-bottom: 5px solid;
 }
-.Gallery .artist .list .item .name{
-    margin : 16px 0 1px 0;
-    font-size: 16px;
+.Gallery .artist .list .item .info{
+    font-size : 14px;
+}
+.Gallery .artist .list .item .info .name{
+    font-size: 24px;
     font-weight: 700;
+    margin-bottom: 0.25em;
 }
-.Gallery .artist .list .item .contact{
-    font-size: 16px;
-    margin-bottom: 46px;
-}
+
 .Gallery .artist .list .item .profile{
-    width : 136px;
-    height : 136px;
-    border-radius: 78px;
+    width : 200px;
+    height : 200px;
+    border-radius: 120px;
     background-size: contain;
-    border : solid 1px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border : solid 1px ; */
 }
 /* -------------------------------------- */
 .Gallery .goBack{
@@ -162,4 +170,11 @@
 .Gallery .goBack .text{
     font-size: 24px;
     font-weight: 800;
+}
+
+@media screen and (max-width : 1024px){
+    .Gallery .section .wrapper{
+        width : 100%;
+    }
+
 }

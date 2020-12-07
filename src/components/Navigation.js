@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import '../css/Navigation.css';
 
 
 const navList = [
     {
         level : 6,
-        category : "조화, 경계: 현실과 가상",
+        category : "조화, 경계",
         items : ["치즈&", "投影(투영)", "이 게임은 처음부터 내가 졌어!", "Dreamcatcher (Don't know why)", "화환 같아", "따뜻한 이글루 만들기 대작전"]
     },
     {
@@ -16,7 +16,7 @@ const navList = [
     },
     {
         level : 4,
-        category : "확장: 사고의 연결",
+        category : "확장",
         items : ["Google Edu", "‘2019pkw2020’", "방, 그리고 나", "Artificial Death"]
     },
     {
@@ -38,6 +38,8 @@ const Navigation = () => {
         setNavToggle(!navToggle);
         console.log(navToggle);
     }
+    const history = useHistory();
+    console.log(history);
     //const currentLevel = parseInt( document.querySelector('.content').getAttribute('id') );
     //console.log(currentLevel);
 

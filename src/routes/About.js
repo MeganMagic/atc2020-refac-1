@@ -72,6 +72,7 @@ const About = () => {
         console.log("about CDU");
         document.body.style.color = "#161616";
         document.body.style.backgroundColor = "#50a0d9";
+        window.scrollTo(0,0);
         return() => document.body.style.backgroundColor = "white"
     },[])
 

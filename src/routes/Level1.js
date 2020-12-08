@@ -2,11 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../css/Level1.css';
-
 import GNB from '../components/GNB';
 import HLine from '../components/HLine';
 import useAxios from '../hooks/useAxios';
-
 import Carousel from 'react-elastic-carousel';
 
 
@@ -28,6 +26,10 @@ const sendLogResponse =  (e, nameRef, messRef, setTrigger) => {
     .then( (res) =>  {
         console.log(res);
         setTrigger(Date.now);
+        const logsTop = document.querySelector('.logs').offsetTop;
+        if(logsTop && window.scrollY > 536) {
+            window.scrollTo({top: logsTop-50, left:0, behavior:'smooth'});
+        }
     })
     .catch(error => {
         console.log(error);
@@ -38,10 +40,7 @@ const sendLogResponse =  (e, nameRef, messRef, setTrigger) => {
     //clear
     nameRef.current.value = '';
     messRef.current.value = '';
-    
 };
-
-
 
 const Log = ({ name, comment, timestamp, color }) => {
     //early exit, if data is strange
@@ -87,6 +86,10 @@ const Level1 = () => {
     const [ trigger, setTrigger ] = useState();
     const { loading, error, data, refetch } = useAxios(`https://docs.google.com/spreadsheets/d/1jabZBtATvQRy0035HlgBzq0nHq2nZ1025skCQDy1i78/gviz/tq?`, "logs")
     
+    //cdm
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
     //cdu, by data
     useEffect(()=>{
         if (!loading) { 
@@ -117,7 +120,7 @@ const Level1 = () => {
                     <Carousel 
                         pagination={false} 
                         itemsToScroll={1} itemsToShow={4}
-                        enableAutoPlay autoPlaySpeed={5000}
+                        enableAutoPlay autoPlaySpeed={7000}
                         breakPoints={[
                             {width : 1, itemsToShow : 1},
                             {width : 600, itemsToShow : 2},

@@ -1,3 +1,7 @@
+.about{
+    overflow-x: hidden;
+}
+
 .about .section .text{
     text-align: left;
     margin-bottom: 1em;

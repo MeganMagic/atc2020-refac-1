@@ -3,9 +3,12 @@
     height : 100vh;
     white-space: pre-line;
 }
+.home::-webkit-scrollbar {
+    display: none;
+}
 
 .home .poster{
-    padding : 0 50px;
+    padding : 10px 50px 0 50px;
 }
 .home .poster .image{
     width: 924px;
@@ -71,6 +74,31 @@
     flex-direction: column;
 }
 
+/* ---------------------------------------- */
+.home .switch{
+    position: absolute;
+    top : 20px;
+    right : 20px;
+}
+.home .selectLang {
+    font-size: 20px;
+    color : #333;
+}
+/* ---------------------------------------- */
+.home .logos{
+    position: absolute;
+    right : 15px;
+    bottom : 15px;
+    z-index : 0;
+}
+.home .logos .logo{
+    margin-left: 20px;
+    height : 30px;
+}
+
+
+/* ---------------------------------------- */
+
 @media screen and (max-width : 1024px){
     .home .flex-row-wrapper{
         flex-direction: column;
@@ -94,10 +122,18 @@
     .home .menu .go .icon{
         margin-top: 30px;
     }
+
+    .home .logos .logo{
+        height : 25px;
+    }
 }
 
 @media screen and (max-width : 768px){
     .home .title{
         font-size: 40px;
     }
+    .home .logos .logo{
+        height : 20px;
+    }
+
 }

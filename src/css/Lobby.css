@@ -6,7 +6,7 @@
     display: block;
     list-style: none;
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
 
     position : relative;
@@ -57,36 +57,36 @@
 }
 .lobby .content .item-entrance .flex-row-wrapper{
     display: flex;
+    width: fit-content;
     flex-direction: row;
     align-items: flex-end;
+    margin-right: 100px;
 }
 
 .lobby .content .item-entrance .thumbnail{
-    width : 360px;
-    height : 100%;
-    margin-right: 22px;
+    width : 400px;
+    height : 80vh;
     background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size:cover;
     background-position: center;
-    background-attachment:fixed;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border : 5px solid;
+}
 
-    border-top-left-radius: 85px;
-    border-top-right-radius: 85px;
-}
-.lobby .content .item-entrance .thumbnail .picFrame{
-    width : 100%;
-}
 
 .lobby .content .item-entrance .info{
     display: block;
-    width : 320px;
+    width : 300px;
+    background-color: white;
+    padding : 20px;
+    margin-bottom: 8vh;
+    position: relative;
+    left : -60px;
 }
 .lobby .content .item-entrance .info .title{
     font-size : 24px;
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
 }
 .lobby .content .item-entrance .info .desc{
     font-size : 12px;
@@ -110,42 +110,23 @@
     align-items: center;
 }
 
-
-
-
-
-
-.lobby .content .item-entrance .flex-row-wrapper-TEMP{
-    display: flex;
-    width: fit-content;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-right: 100px;
-}
-.lobby .content .item-entrance .thumbnail-TEMP{
-    width : 400px;
-    height : 80vh;
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    border : 5px solid;
-}
-
-.lobby .content .item-entrance .info-TEMP{
-    display: block;
-    width : 300px;
-    background-color: white;
+/* ---------------------------------------------------- */
+.lobby .content .nextLevel{
+    margin: 0;
+    margin-right : 1vw;
     padding : 20px;
-    margin-bottom: 8vh;
-    position: relative;
-    left : -50px;
+
+    height : 100%;
+    width : fit-content;
+    width: -moz-fit-content;
+    vertical-align: top;
 }
-.lobby .content .item-entrance .info-TEMP .title{
-    font-size : 24px;
-    font-weight: bold;
-    margin-bottom: 3px;
+.lobby .content .nextLevel .stair {
+    height: 100%;
+    border: solid 2px;
+    padding : 10px;
 }
-.lobby .content .item-entrance .info-TEMP .desc{
-    font-size : 12px;
+.lobby .content .nextLevel .stair>img{
+    border : 1px solid #161616;
+    height: 100%;
 }

@@ -1,14 +1,16 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Route } from 'react-router-dom';
 import Level from './Level';
 import '../css/Lobby.css';
 import GNB from '../components/GNB';
 import Navigation from '../components/Navigation';
+import text from '../hooks/useLangSwitch';
 
 
-const Lobby = () => {
+const Lobby = ({ lang, setLang }) => {
+    const [ level, setLevel ] = useState(6);
+
     useEffect(()=>{
-        console.log("Lobby CDU")
         document.body.style.overflow = "hidden";
         return () => { 
             document.body.style.color = "#191918"; 
@@ -16,12 +18,19 @@ const Lobby = () => {
         };
     }, [])
 
+
     return(
         <div className="lobby">
-            <Route path="/lobby/:num"><Level /></Route>
+            <Route path="/lobby/:num">
+                <Level lang={lang} setLobbyLevel={setLevel}/>
+            </Route>
             
-            <GNB />
-            <Navigation />
+            <GNB 
+                backgroundColor="white"
+                lang={lang} setLang={setLang} 
+                currentPosition={ level + text("lobby", "currentPosition", lang)}
+            />
+            <Navigation lang={lang}/>
         </div>
     )
 }

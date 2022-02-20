@@ -1,7 +1,8 @@
+
 .lobby .navigation{
     width : 472px;
     height : 317px;
-    z-index : 5;
+    z-index : 3;
     border: solid 2px;
     background-color: white;
 
@@ -14,7 +15,7 @@
 }
 .lobby .navShow{
     bottom : 35px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .lobby .navigation .title{
@@ -27,6 +28,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    position : sticky;
+    position: -webkit-sticky;
+    top : 0px;
+    background-color: white;
+    border-bottom: solid 1px;
 }
 .lobby .navigation .navItem{
     height : auto;
@@ -40,7 +47,6 @@
 .lobby .navigation .navItem .floor{
     font-size: 18px;
     font-weight: 800;
-    font-family: MurdenCF;
     margin-right : 22px;
 }
 .lobby .navigation .navItem .floor-info .name{
@@ -52,3 +58,6 @@
     text-align: justify;
 }
 
+.lobby .navigation #navigationLevel6{
+    border-top : none;
+}

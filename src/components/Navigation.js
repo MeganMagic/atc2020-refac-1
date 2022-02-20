@@ -1,67 +1,39 @@
-import { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Navigation.css';
+import text from '../hooks/useLangSwitch'
 
 
-const navList = [
-    {
-        level : 6,
-        category : "조화, 경계",
-        items : ["치즈&", "投影(투영)", "이 게임은 처음부터 내가 졌어!", "Dreamcatcher (Don't know why)", "화환 같아", "따뜻한 이글루 만들기 대작전"]
-    },
-    {
-        level : 5,
-        category : "파생",
-        items : ["Zumi Heroes", "지식 세공사: 분류의 기술", "Du(2) 自己", "Pixel Travel"]
-    },
-    {
-        level : 4,
-        category : "확장",
-        items : ["Google Edu", "‘2019pkw2020’", "방, 그리고 나", "Artificial Death"]
-    },
-    {
-        level : 3,
-        category : "인식",
-        items : ["물질 탈피", "B&W", "염리투어", "펑", "프라프라"]
-    },
-    {
-        level : 2,
-        category : "환경",
-        items : ["Pandemos", "왕궁"]
-    }
+const navList = [6, 5, 4, 3, 2]
 
-]
-
-const Navigation = () => {
+const Navigation = ({ lang }) => {
     const [navToggle, setNavToggle] = useState(false);
+    const myRef = useRef(null);
     const toggleNav = () => {
         setNavToggle(!navToggle);
-        console.log(navToggle);
+        myRef.current.scrollTop = 0;
     }
-    const history = useHistory();
-    console.log(history);
-    //const currentLevel = parseInt( document.querySelector('.content').getAttribute('id') );
-    //console.log(currentLevel);
-
     useEffect(()=>{
-
+        if(myRef) { myRef.current.scrollTop = 0; }
     }, [])
 
     return(
-        <div className={['navigation', navToggle ? 'navShow' : ''].join(' ')} >
+        <div className={['navigation', navToggle ? 'navShow' : ''].join(' ')} ref={myRef}>
             <div className="title" onClick={toggleNav}>
-                <div style={{marginLeft : "18px"}}>층별안내</div>
-                <div style={{marginRight : "18px"}}>{navToggle ? '닫기' : '열기'}</div>
+                <div style={{marginLeft : "18px"}}>{lang==="KO"? "층별안내" : "Navigation"}</div>
+                <div style={{marginRight : "18px"}}>{navToggle ? lang==="KO"? "닫기" : "close" : lang==="KO" ? "열기" : "open"}</div>
             </div>
-            {navList.map((data) => {
+            {navList.map((data, index) => {
                 return (
-                    <Link to={`/lobby/${data.level}`}>
-                        <div className='navItem' id={`navigationLevel${data.level}`}>
-                            <div className="floor">F{data.level}</div>
+                    <Link to={`/lobby/${data}`} key={index}>
+                        <div className='navItem' id={`navigationLevel${data}`}>
+                            <div className="floor">F{data}</div>
                             <div className="floor-info">
-                                <div className="name">{data.category}</div>
+                                <div className="name">
+                                    {text("navigation", `category${data}`, lang)}    
+                                </div>
                                 <div className="list">
-                                    {data.items.join(`  |  `)}
+                                    {text("navigation", `items${data}`, lang).split("\n").join(`  |  `)}
                                 </div>
                             </div>
                         </div>

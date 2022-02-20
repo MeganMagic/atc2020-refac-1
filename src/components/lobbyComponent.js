@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import nextLevel from '../data/stairway.jpg';
-import picFrame from '../data/picFrame.svg';
-
 import { Fragment } from 'react';
 
 
@@ -25,39 +22,15 @@ const lobbyComponent = {
         </li>
         </Fragment>
     ),
-    // entrance : (key, level, workID, title, desc, thumbnail) => (
-    //     <li className="item-entrance" key={key} id={workID}>
-    //         <Link to={`/gallery/${level}/${workID}`}>
-    //             <div className="flex-row-wrapper">
-    //                 {/* <img className="thumbnail" alt="thumbnail" src={thumbnail}/> */}
-    //                 <div className="thumbnail" style={{backgroundImage:`url(${thumbnail})`}}>
-    //                     {/* <div className="innerFrame"></div> */}
-    //                     <img className="picFrame" alt="frame" src={picFrame} />
-    //                 </div>
-
-    //                 <div className="info">
-    //                     <div className="title">{title}</div>
-    //                     <div className="desc">{desc}</div>
-    //                 </div>
-    //             </div>
-    //         </Link>
-    //     </li>
-    // )
     entrance : (key, level, workID, title, desc, thumbnail) => (
         <li className="item-entrance" key={key} id={workID}>
-            <Link to={`/gallery/${level}/${workID}`}>
-                
-                <div className="flex-row-wrapper-TEMP">
-
-                    <div className="thumbnail-TEMP" style={{backgroundImage:`url(${thumbnail})`}}>
-                    </div>
-
-                    <div className="info-TEMP">
-                        
+            <Link to={`/gallery/${level}/${workID}`} key={key}>
+                <div className="flex-row-wrapper">
+                    <div className="thumbnail" style={{backgroundImage:`url(${thumbnail})`}}></div>
+                    <div className="info">
                         <div className="title">{title}</div>
                         <div className="desc">{desc}</div>
                     </div>
-
                 </div>
             </Link>
         </li>

@@ -1,180 +1,165 @@
-.Gallery{
+.gallery{
+    overflow-x: hidden;
 }
 
-.Gallery .section{
-    width : 100vw;
+.gallery .intro .title{
+    font-size: 80px;
 }
-.Gallery .section .wrapper{
-    margin : 0 auto;
-    width : 1024px;
-    padding : 60px 0 80px 0;
-}
-.Gallery .section .sectionTitle{
-    width : fit-content;
-    margin : 0 auto;
-    padding : 0 8px;
-
-    position: relative;
-    top : -12px;
-    background-color: white;
-}
-.Gallery .section .sectionTitle .text{
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.Gallery .line {
-    width : 100vw;
-    height : 1px;
-    min-height: 1px;
-}
-/* -------------------------------------- */
-.Gallery .intro {
-    margin-top: 53px;
-}
-.Gallery .intro .flex-row-wrapper { 
+.gallery .intro .desc{
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+    margin-bottom : 50px;
 }
-.Gallery .intro .flex-row-wrapper>div{
-    width : 50%;
-    text-align: left;
-}
-.Gallery .intro .title{
-    font-size: 50px;
+.gallery .intro .desc .info{
+    width : 25%;
     font-weight: 800;
-    margin-bottom: 15px;
-}
-.Gallery .intro .genre{
-    font-size: 16px;
-    margin-bottom: 28px;
-}
-.Gallery .intro .video{
-    margin-bottom: 53px;
-}
-.Gallery .intro .desc{
     font-size: 20px;
     line-height: 1.88;
 }
-/* -------------------------------------- */
-.Gallery .detail .wrapper{
-    margin-bottom : 20px;
-}
-.Gallery .detail .item{
-    margin-bottom : 40px;
-}
-.Gallery .detail .item img{
-    width : 100%;
-}
-.Gallery .detail .desc{
-    font-size: 16px;
+.gallery .intro .desc .text{
+    width : 75%;
+    font-size: 24px;
     line-height: 1.88;
 }
+/* ------------------------------------------- */
 
-.Gallery .detail .slider{
-    border : 1px solid rgba(0, 0, 0, 0.267);
+.gallery .detail .item{
+    margin-bottom: 40px;
+}
+.gallery .detail .item img{
     width : 100%;
-    background-position: center;
-    background-size: cover;
-    transition : background-image 0.5s ease-in-out;
+    height: intrinsic;
+}
+.gallery .detail .desc{
+    white-space: pre-line;
+    font-size: 20px;
+    line-height: 1.88;
+}
+.gallery .detail .link{
+    width : 60%;
+    margin : 0 auto 80px auto;
+}
+.gallery .detail .link .linkedImage{
+    width : 100%;
+    border : 10px solid;
+}
 
+.gallery .detail .slider{
+    width: 100%;
+}
+.gallery .detail .slider img{
+    border : 1px solid #ccc;
+}
+
+.gallery .detail .slider .rec-arrow{
+    border : none;
+    color : #bbb;
+}
+.gallery .detail .slider .rec-arrow:hover:enabled{
+    background-color: transparent;
+    color : #777;
+}
+
+/* ------------------------------------------- */
+
+.gallery .artists .flex-row-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.gallery .artists .item{
+    text-align: center;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .artists .video{
+    padding : 0;
+}
+.gallery .artists .item .profile {
+    width : 250px;
+    height : 250px;
+    border-radius: 125px;
+    border : solid 1px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.gallery .artists .item .info {
+    margin: 20px 0;
+    font-size: 20px;
+}
+.gallery .artists .item .info .name {
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+.gallery .artists .item .info .major{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.gallery .artists .item .info .link{
+    margin : 0 auto;
+    width: intrinsic; /* safari */
+    width : -moz-fit-content; /* firefox */
+    width : -webkit-fit-content; /* chrome */
+}
+.gallery .artists .item .info .link .goToLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px;
+}
+
+/* ------------------------------------------- */
+.gallery .goLobby{
+    width : 400px;
+    margin : 0 auto 100px auto;
+    padding : 50px 70px;
+
+    border : 1px solid;
+    border-radius: 200px;
+    transition : background-color 0.2s ease-in-out;
+}
+.gallery .goLobby:hover{
+    color : white;
+}
+.gallery .goLobby:hover .line{
+    stroke : white;
+}
+
+.gallery .goLobby .flex-row-wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
-.Gallery .detail .slider .button {
-    height : 100%;
-    padding : 0 20px;
 
+.gallery .goLobby .title{
     font-size: 30px;
-    font-weight: 300;
-    color: white;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.Gallery .detail .slider #left{
-    background: transparent;
-}
-.Gallery .detail .slider #left:hover {
-    background : linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-}
-.Gallery .detail .slider #right{
-    flex-direction: row-reverse;
-    background: transparent;
-}
-.Gallery .detail .slider #right:hover{
-    background : linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-}
-/* -------------------------------------- */
-.Gallery .artist .wrapper{
-    padding-top: 12px;
-    padding-bottom : 130px;
-}
-.Gallery .artist .teamName{
-    font-size: 20px;
     font-weight: 800;
-    text-align: center;
 }
-.Gallery .artist .list{
-    width: 1024px;
-    margin : 0 auto;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.Gallery .artist .list .item{
-    text-align: center;
-    margin-top: 60px;
-
-    padding : 20px 10px 40px 10px;
-    border: 1px solid;
-    border-radius: 10px;
-    border-bottom: 5px solid;
-}
-.Gallery .artist .list .item .info{
-    font-size : 14px;
-}
-.Gallery .artist .list .item .info .name{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 0.25em;
-}
-
-.Gallery .artist .list .item .profile{
-    width : 200px;
-    height : 200px;
-    border-radius: 120px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* border : solid 1px ; */
-}
-/* -------------------------------------- */
-.Gallery .goBack{
-    width : 290px;
-    height : 67px;
-    border : 2px solid;
-    margin : 0 auto 86px auto;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Gallery .goBack .text{
+.gallery .goLobby .text{
     font-size: 24px;
     font-weight: 800;
 }
 
-@media screen and (max-width : 1024px){
-    .Gallery .section .wrapper{
+
+/* ------------------------------------------- */
+@media screen and (max-width : 1440px){
+    .gallery .section{
         width : 100%;
     }
-
+    .gallery .detail .link{
+        width : 75%;
+    }
+}
+@media screen and (max-width : 1024px){
+    .gallery .detail .link{
+        width : 100%;
+    }
 }

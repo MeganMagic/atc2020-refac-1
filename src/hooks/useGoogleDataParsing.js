@@ -37,7 +37,8 @@ const useGoogleDataParsing = (jsonData, table) => {
                 artists : d[3].v.split('/'),
                 genre : d[4].v,
                 archiving : d[5].v,
-                detailDesc : d[6].v
+                detailDesc : d[6].v,
+                interview : d[7].v
             }
         })
     }
@@ -47,7 +48,8 @@ const useGoogleDataParsing = (jsonData, table) => {
             {
                 type : d[0].v,
                 src : d[1].v,
-                href : d[2].v
+                href : d[2].v,
+                caption : d[3].v
             }
             :
             {

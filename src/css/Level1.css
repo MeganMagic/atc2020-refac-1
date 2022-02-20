@@ -1,4 +1,6 @@
-
+.level1{
+    overflow-x: hidden;
+}
 .level1 .section .emphasis{
     font-size: 80px;
     padding-bottom : 0px;
@@ -19,6 +21,9 @@
     display : flex;
     flex-direction: column;
     overflow-x: hidden;
+}
+.level1 .logs .log::-webkit-scrollbar{
+    display: none;
 }
 .level1 .logs .log .info{
     margin-bottom: 20px;
@@ -41,6 +46,7 @@
     border : solid 3px;
     border-bottom: 7px solid;
     border-radius: 20px;
+    background-color: white;
 
     display: flex;
     flex-direction: column;
@@ -76,6 +82,8 @@
     font-size : 24px;
     border : none;
     border-bottom: 2px solid #bbb;
+    background-color: transparent;
+
     transition : border 0.2s ease-in-out;
 }
 .level1 .logs .form .item .myInput:focus{
@@ -106,17 +114,90 @@
 }
 
 /* -------------------------------- */
+.level1 .stores .store{
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.level1 .stores .store .info{
+    width : 40%;
+}
+.level1 .stores .store .content{
+    margin-top: 75px;
+    width : 60%;
+}
+.level1 .stores .store .form{
+    height : 600px;
+    overflow-y: scroll;
+}
+
+.level1 .stores .docent .schedule{
+    margin-top: 10px;
+}
+
+/* ------------------------------- */
+.level1 .goHome{
+    width : 400px;
+    margin : 0 auto 100px auto;
+    padding : 50px 70px;
+
+    border : 1px solid;
+    border-radius: 200px;
+    transition : background-color 0.2s ease-in-out;
+}
+.level1 .goHome:hover{
+    background-color: #161616;
+    color : white;
+}
+.level1 .goHome:hover .line{
+    stroke : white;
+}
+
+.level1 .goHome .flex-row-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.level1 .goHome .title{
+    font-size: 30px;
+    font-weight: 800;
+}
+.level1 .goHome .text{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* -------------------------------- */
 /* Carousel */
 .rec.rec-arrow {
-    background: white;
-    border : 1px solid #161616;
+    background: none;
+    border : none;
     box-shadow: none;
+    color : #777;
 }
 .rec.rec-arrow:hover:enabled, .rec.rec-arrow:focus:enabled {
-    background-color: #efefef;
-    color : inherit;
+    background : none;
+    color : #777;
     box-shadow: none;
+}
+.rec.rec-arrow:hover:enabled{
+    color: #000;
 }
 .rec.rec-arrow:disabled {
     visibility: hidden;
+}
+.level1 .carousel_wrapper{
+    cursor: grab;
+}
+
+
+@media screen and (max-width : 1024px){
+    .level1 .stores .store{ flex-direction: column; }
+    .level1 .stores .store .info{ width : 100%; }
+    .level1 .stores .store .form{ width : 100%; }
 }

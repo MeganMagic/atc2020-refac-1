@@ -7,10 +7,10 @@ const useScrollChange = () => {
         const diffX = e.deltaX;
         //velocity control
         if ( Math.abs(diffY) > Math.abs(diffX) ) {
-            ref.current.scrollLeft -= (diffY*0.3);
+            ref.current.scrollLeft += (diffY*0.5);
         }
         else {
-            ref.current.scrollLeft += (diffX*0.5);
+            ref.current.scrollLeft += (diffX*0.75);
         }
     }
     return { ref, onWheel }

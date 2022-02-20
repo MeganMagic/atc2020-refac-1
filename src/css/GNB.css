@@ -7,38 +7,118 @@
     position : fixed;
     top : 0px;
     left : 0px;
-    z-index : 9;
+    z-index : 7;
     transition : top 0.5s ease-in-out;
 
     display : flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin : 0 2%;
 } 
 .gnb-show{
     top : -66px;
 }
-.gnb .item {
+
+.gnb .current {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position : absolute;
+    top : 0px;
+    z-index: 9;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 0;
+}
+
+
+.gnb .gnbItem {
     font-size: 18px;
     font-weight: bold;
 } 
 .gnb .logo {
-    height: 28px;
+    width : auto;
+    padding : 17px 0 13px 2px;
 } 
 .gnb .logo .img{
-    height : 100%;
+    height : 23px;
 }
  
-.gnb .menu-hide {
-    display: none;
+.gnb .gnb-flex-row-wrapper{
+    /* width : 100%; */
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
- 
-.gnb .search{
-    border-bottom: 1px solid;
-    height : 34px;
-} 
-.gnb .search .input{
-    height : 100%;
-    margin : 5px;
+.gnb .menu .icon>svg{
+    vertical-align: middle;
+}
+
+.gnb .lang > select {
+    border : none;
+    width : 50px;
+    background-color: transparent;
+    /* init <input> setting */
+    border-radius: 0;
+    outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */ 
+    font-weight: 800;
+    font-size : 16px;
+}
+
+/* ----------------------- */
+.gnb .gnbMenu{
+    overflow-y : scroll;
+    width : 100vw;
+    height : 100vh;
+    padding : 2%;
+    padding-bottom : 10vh;
+    border-right : 1px solid;
+
+    position : absolute;
+    top : 56px;
+    left : -2%;
+    opacity: 100;
+
+    transition : left 0.5s ease-in-out;
+    transition : opacity 0.3s ease-in-out;
+}
+.gnb .menu-hide{
+    left : -110vw;
+    opacity: 0;
+}
+
+.gnb .gnbMenu .menuItem{
+    font-size: 7vh;
+    font-weight: 800;
+    padding : 3vh 50px;
+}
+.gnb .gnbMenu .menuItem:hover{
+    text-decoration: underline;
+}
+
+/* ----------------------- */
+.gnb .switch {
+    margin-left: 30px;
+}
+.gnb .switch .selectLang{
+    width : 2.7em;
+    font-weight: 800;
+    font-size: 5vh;
+    vertical-align: middle;
+}
+.gnb .gnbMenu .lang:hover{
+    text-decoration: none;
+}
+
+
+/* ----------------------- */
+@media screen and (max-width : 786px){
+    .gnb .menu .text{
+        display: none;
+    }
 }
